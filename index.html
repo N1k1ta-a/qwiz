@@ -108,6 +108,7 @@ h2.question {
     color: #fff !important;
     border-color: #ff4d6d !important;
     animation: pulse 0.5s ease;
+    cursor: default;
 }
 
 .option-btn.wrong {
@@ -236,14 +237,15 @@ h2.question {
 
 <div class="container">
 
+    <!-- Вопрос 1 -->
     <div class="slide active" id="slide1">
         <div class="progress">Вопрос 1 из 10</div>
         <h2 class="question">Дата нашего знакомства?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, false)">13.06.26</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">13.07.26</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">12.06.26</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">14.06.26</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide1', 1)">12.06.26</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide1', 1)">13.06.26</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide1', 1)">14.06.26</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide1', 1)">13.07.26</button>
         </div>
         <div class="warm-words">
             <p>Этот день я запомнил навсегда — с него началось самое тёплое лето в моей жизни 💕</p>
@@ -251,14 +253,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 2 -->
     <div class="slide" id="slide2">
         <div class="progress">Вопрос 2 из 10</div>
-        <h2 class="question">Как я чаще всего тебя называю?</h2>
+        <h2 class="question">Как я чаще всего тебя называю? (выбери 2)</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Солнышко</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Зайка</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">Чудо</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Принцесса</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide2', 2)">Зайка</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide2', 2)">Солнышко</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide2', 2)">Принцесса</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide2', 2)">Чудо</button>
         </div>
         <div class="warm-words">
             <p>Ты и правда моё солнышко и чудо — самое тёплое и самое родное ☀️</p>
@@ -266,14 +269,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 3 -->
     <div class="slide" id="slide3">
         <div class="progress">Вопрос 3 из 10</div>
         <h2 class="question">Помнишь ли ты нашу первую встречу?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Долго искали друг друга</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Нашли быстро</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Потерялся я</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Потерялась ты</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide3', 1)">Нашли быстро</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide3', 1)">Потерялся я</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide3', 1)">Долго искали друг друга</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide3', 1)">Потерялась ты</button>
         </div>
         <div class="warm-words">
             <p>Мы долго искали друг друга, но нашли — и это было самое лучшее 🥰</p>
@@ -281,14 +285,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 4 -->
     <div class="slide" id="slide4">
         <div class="progress">Вопрос 4 из 10</div>
         <h2 class="question">Наше любимое место, куда часто возвращались?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Китайский парк</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Поклонная гора</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Ботанический сад</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Аквапарк</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide4', 1)">Поклонная гора</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide4', 1)">Ботанический сад</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide4', 1)">Аквапарк</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide4', 1)">Китайский парк</button>
         </div>
         <div class="warm-words">
             <p>Китайский парк — там каждый раз было волшебно, потому что рядом была ты 🌸</p>
@@ -296,14 +301,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 5 -->
     <div class="slide" id="slide5">
         <div class="progress">Вопрос 5 из 10</div>
         <h2 class="question">Мой любимый цвет?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Чёрный</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Белый</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Синий</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Красный</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide5', 1)">Синий</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide5', 1)">Чёрный</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide5', 1)">Красный</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide5', 1)">Белый</button>
         </div>
         <div class="warm-words">
             <p>Чёрный — как мой стиль. Но самое красивое рядом со мной — это ты 🖤</p>
@@ -311,14 +317,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 6 -->
     <div class="slide" id="slide6">
         <div class="progress">Вопрос 6 из 10</div>
-        <h2 class="question">Место, куда мы хотим сходить вместе?</h2>
+        <h2 class="question">Место, куда мы хотим сходить вместе? (выбери 2)</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Аквапарк</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Кошачье кафе</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">Целебный парк</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Сиреневый парк</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide6', 2)">Кошачье кафе</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide6', 2)">Целебный парк</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide6', 2)">Сиреневый парк</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide6', 2)">Аквапарк</button>
         </div>
         <div class="warm-words">
             <p>Скорее бы уже вместе — аквапарк и целебный парк ждут нас 🌊🌿</p>
@@ -326,14 +333,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 7 -->
     <div class="slide" id="slide7">
         <div class="progress">Вопрос 7 из 10</div>
         <h2 class="question">Что из парного мы купили?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Кулоны</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Кольца</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Браслеты</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Чехлы</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide7', 1)">Кольца</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide7', 1)">Браслеты</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide7', 1)">Кулоны</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide7', 1)">Чехлы</button>
         </div>
         <div class="warm-words">
             <p>Наши кулоны — маленький символ того, что мы всегда рядом 💫</p>
@@ -341,13 +349,14 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 8 -->
     <div class="slide" id="slide8">
         <div class="progress">Вопрос 8 из 10</div>
         <h2 class="question">Что я попросил сделать для себя?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Чехол</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Открытку</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Браслет</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide8', 1)">Браслет</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide8', 1)">Чехол</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide8', 1)">Открытку</button>
         </div>
         <div class="warm-words">
             <p>Ты сделала для меня чехол — и это дороже любой покупной вещи 🥹</p>
@@ -355,14 +364,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 9 -->
     <div class="slide" id="slide9">
         <div class="progress">Вопрос 9 из 10</div>
         <h2 class="question">Где мы познакомились?</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">ML (Mobile Legends)</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">PUBG</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">Genshin Impact</button>
-            <button class="option-btn" onclick="checkAnswer(this, false)">HCR</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide9', 1)">PUBG</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide9', 1)">HCR</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'slide9', 1)">Genshin Impact</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide9', 1)">ML (Mobile Legends)</button>
         </div>
         <div class="warm-words">
             <p>Кто бы мог подумать, что игра подарит мне самого родного человека 🎮❤️</p>
@@ -370,14 +380,15 @@ h2.question {
         </div>
     </div>
 
+    <!-- Вопрос 10 -->
     <div class="slide" id="slide10">
         <div class="progress">Вопрос 10 из 10</div>
-        <h2 class="question">Что для меня самое дорогое?</h2>
+        <h2 class="question">Что для меня самое дорогое? (нажми на все)</h2>
         <div class="options">
-            <button class="option-btn" onclick="checkAnswer(this, true)">Наши воспоминания</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">Наши прогулки</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">Как ты смеёшься</button>
-            <button class="option-btn" onclick="checkAnswer(this, true)">Наши планы</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide10', 4)">Наши прогулки</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide10', 4)">Как ты смеёшься</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide10', 4)">Наши планы</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'slide10', 4)">Наши воспоминания</button>
         </div>
         <div class="warm-words">
             <p>Всё, что связано с тобой, — моё самое дорогое. Ты моё всё 💌</p>
@@ -385,6 +396,7 @@ h2.question {
         </div>
     </div>
 
+    <!-- Финальный слайд -->
     <div class="slide" id="slide11">
         <h1>Моя любимая девочка</h1>
         <div class="final-text">
@@ -399,25 +411,35 @@ h2.question {
 </div>
 
 <script>
-function checkAnswer(btn, isCorrect) {
+// Счётчики правильных нажатий по каждому слайду
+const correctCounters = {};
+
+function checkAnswer(btn, isCorrect, slideId, totalCorrect) {
     const optionsContainer = btn.parentElement;
     const warmWords = optionsContainer.nextElementSibling;
     const nextBtn = warmWords.querySelector('.next-btn');
 
-    if (optionsContainer.dataset.answered === "true") return;
+    // Если кнопку уже нажали правильно — игнорируем
+    if (btn.dataset.clicked === "true") return;
 
     if (isCorrect) {
         btn.classList.add('correct');
-        optionsContainer.dataset.answered = "true";
+        btn.dataset.clicked = "true";
 
-        optionsContainer.querySelectorAll('.option-btn').forEach(b => {
-            b.style.pointerEvents = 'none';
-        });
+        // Увеличиваем счётчик правильных для этого вопроса
+        correctCounters[slideId] = (correctCounters[slideId] || 0) + 1;
 
-        setTimeout(() => {
-            warmWords.classList.add('show');
-            nextBtn.classList.add('show');
-        }, 400);
+        // Если набрали нужное количество правильных — показываем тёплые слова
+        if (correctCounters[slideId] >= totalCorrect) {
+            optionsContainer.querySelectorAll('.option-btn').forEach(b => {
+                b.style.pointerEvents = 'none';
+            });
+
+            setTimeout(() => {
+                warmWords.classList.add('show');
+                nextBtn.classList.add('show');
+            }, 400);
+        }
     } else {
         btn.classList.add('wrong');
         setTimeout(() => btn.classList.remove('wrong'), 500);
